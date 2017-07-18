@@ -67,6 +67,10 @@ var get = function(req, res) {
 
 app.get('/api/dragonlance', get);
 
+app.get('/api/so-fail', function() {
+  throw new Error('This api does not work correctly.');
+});
+
 
 
 const PORT = process.env.PORT || 5003;
